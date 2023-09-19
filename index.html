@@ -4,19 +4,25 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Верстка «Gericht»</title>
+	<title>«GerichtCopy»</title>
 </head>
 
 <body>
 	<div class="rootpage">
-		<h1> «Gericht»</h1>
+		<h1>«GerichtCopy»</h1>
 		<div class="rootpage__info">
-
 		</div>
-		<h2>Pages:</h2>
+		<h2>Pages</h2>
 		<ol class="rootpage__list">
 			<li><a target="_blank" href="home.html">Restorant Home</a></li>
 			<li><a target="_blank" href="bar.html">Bar Home</a></li>
+			<li><a target="_blank" href="services.html">Our Services</a></li>
+			<li><a target="_blank" href="about.html">About Us</a></li>
+			<li><a target="_blank" href="contacts.html">Contact Us</a></li>
+			<li><a target="_blank" href="team.html">Our team</a></li>
+			<li><a target="_blank" href="chef.html">Chef Details</a></li>
+			<li><a target="_blank" href="faq.html">FAQ</a></li>
+
 		</ol>
 	</div>
 </body>
@@ -41,10 +47,22 @@
 		min-width: 320px;
 		width: 100%;
 		color: #fff;
-		background-color: #5e5373;
+		animation: color-change-2x 10s linear infinite alternate both;
+		animation-delay: 2s;
+	}
+
+	@keyframes color-change-2x {
+		0% {
+			background: #5e5373;
+		}
+
+		100% {
+			background: #018f99;
+		}
 	}
 
 	body {
+
 		font-family: Montserrat;
 		font-size: 100%;
 		line-height: 1;
