@@ -1117,15 +1117,6 @@ body::after {
   font-family: CormorantUpright;
 }
 
-/*
-
-<div class="book__header block-header">
-	<div class="block-header__sub-title">Reservations</div>
-	<h2 class="block-header__title">Book A Table</h2>
-</div>
-
-*/
-
 [data-bg] {
   overflow: hidden;
   position: relative;
@@ -2531,10 +2522,6 @@ body::after {
   min-width: 0;
 }
 
-.slider-main-barpage {
-  padding-top: 1.25rem;
-}
-
 .slider-main-barpage__image {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2583,6 +2570,9 @@ body::after {
 }
 
 .slider-main-barpage__controll .swiper-pagination-bullet {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2598,12 +2588,12 @@ body::after {
   content: "";
   -webkit-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
-  width: 0rem;
+  width: 0.0625rem;
   background-color: #dcca87;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 0rem;
           flex: 0 0 0rem;
-  height: 0.0625rem;
+  height: 0rem;
 }
 
 .slider-main-barpage__controll .swiper-pagination-bullet-active {
@@ -2612,7 +2602,7 @@ body::after {
 
 .slider-main-barpage__controll .swiper-pagination-bullet-active::after {
   content: "";
-  width: 1rem;
+  height: 1rem;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1rem;
           flex: 0 0 1rem;
@@ -2620,7 +2610,7 @@ body::after {
 
 .slider-main-barpage__scroll {
   position: absolute;
-  bottom: 0;
+  bottom: -1.875rem;
   right: 50%;
   -webkit-transform: translate(50%, 0px);
       -ms-transform: translate(50%, 0px);
@@ -4696,6 +4686,19 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .slider-main-barpage__controll {
+    position: absolute;
+    right: 2%;
+    bottom: 20%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+
   .special__body {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
@@ -4973,7 +4976,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .main-slider {
-    padding-bottom: 4.375rem;
+    padding-bottom: 1.25rem;
   }
 
   .about-section {
@@ -5629,7 +5632,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .main-slider {
-    padding-bottom: 0.0000000625rem;
+    padding-bottom: 0.3125rem;
   }
 
   .about-section {
@@ -5807,11 +5810,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .main-barpage {
-    padding-top: 7.5625rem;
+    padding-top: 5rem;
   }
 
   .main-barpage {
-    padding-bottom: 0.0000000625rem;
+    padding-bottom: 1.25rem;
   }
 
   .slider-main-barpage__image::before {
@@ -6277,6 +6280,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             justify-content: center;
   }
 
+  .slider-main-barpage {
+    padding-top: 0.625rem;
+  }
+
   .menu-main-barpage {
     top: -1.875rem;
   }
@@ -6540,6 +6547,23 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
         align-self: center;
     -ms-grid-column-align: center;
         justify-self: center;
+  }
+
+  .slider-main-barpage__controll .swiper-pagination-bullet {
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+  }
+
+  .slider-main-barpage__controll .swiper-pagination-bullet::after {
+    height: 0.0625rem;
+    width: 0rem;
+  }
+
+  .slider-main-barpage__controll .swiper-pagination-bullet-active::after {
+    content: "";
+    width: 1rem;
+    height: 0.0625rem;
   }
 
   .slider-main-barpage__scroll {
@@ -6860,15 +6884,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     }
 }
 
-@supports (padding-bottom: clamp( 0.0000000625rem , -1.3861385316rem  +  6.9306929703vw , 4.375rem )) {
+@supports (padding-bottom: clamp( 0.3125rem , 0.015470297rem  +  1.4851485149vw , 1.25rem )) {
     .main-slider {
-      padding-bottom: clamp( 0.0000000625rem , -1.3861385316rem  +  6.9306929703vw , 4.375rem );
+      padding-bottom: clamp( 0.3125rem , 0.015470297rem  +  1.4851485149vw , 1.25rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 0.0000000625rem , -1.3861385316rem  +  6.9306929703vw , 4.375rem )) {
+@supports not (padding-bottom: clamp( 0.3125rem , 0.015470297rem  +  1.4851485149vw , 1.25rem )) {
     .main-slider {
-      padding-bottom: calc(0.0000000625rem + 4.3749999375 * (100vw - 20rem) / 63.125);
+      padding-bottom: calc(0.3125rem + 0.9375 * (100vw - 20rem) / 63.125);
     }
 }
 
@@ -7392,27 +7416,27 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     }
 }
 
-@supports (padding-top: clamp( 7.5625rem , 7.5625rem  +  0vw , 7.5625rem )) {
+@supports (padding-top: clamp( 5rem , 4.1881188119rem  +  4.0594059406vw , 7.5625rem )) {
     .main-barpage {
-      padding-top: clamp( 7.5625rem , 7.5625rem  +  0vw , 7.5625rem );
+      padding-top: clamp( 5rem , 4.1881188119rem  +  4.0594059406vw , 7.5625rem );
     }
 }
 
-@supports not (padding-top: clamp( 7.5625rem , 7.5625rem  +  0vw , 7.5625rem )) {
+@supports not (padding-top: clamp( 5rem , 4.1881188119rem  +  4.0594059406vw , 7.5625rem )) {
     .main-barpage {
-      padding-top: calc(7.5625rem + 0 * (100vw - 20rem) / 63.125);
+      padding-top: calc(5rem + 2.5625 * (100vw - 20rem) / 63.125);
     }
 }
 
-@supports (padding-bottom: clamp( 0.0000000625rem , -1.3861385316rem  +  6.9306929703vw , 4.375rem )) {
+@supports (padding-bottom: clamp( 1.25rem , 0.2599009901rem  +  4.9504950495vw , 4.375rem )) {
     .main-barpage {
-      padding-bottom: clamp( 0.0000000625rem , -1.3861385316rem  +  6.9306929703vw , 4.375rem );
+      padding-bottom: clamp( 1.25rem , 0.2599009901rem  +  4.9504950495vw , 4.375rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 0.0000000625rem , -1.3861385316rem  +  6.9306929703vw , 4.375rem )) {
+@supports not (padding-bottom: clamp( 1.25rem , 0.2599009901rem  +  4.9504950495vw , 4.375rem )) {
     .main-barpage {
-      padding-bottom: calc(0.0000000625rem + 4.3749999375 * (100vw - 20rem) / 63.125);
+      padding-bottom: calc(1.25rem + 3.125 * (100vw - 20rem) / 63.125);
     }
 }
 
@@ -8799,6 +8823,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     background-color: #dcca87;
   }
 }
+
 
 .webp .menu-block._active-food::before{ background: url(../img/mainpage/menu/bg2.webp) center/cover no-repeat; }
 
